@@ -4,7 +4,7 @@ import data from "../../testdata/HRMlogin.json";
 
 import { faker } from '@faker-js/faker';
 
-test('test', async ({ page }) => {
+test('verify user can add pay grades', async ({ page }) => {
   await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
   await page.getByRole('textbox', { name: 'Username' }).click();
   await page.getByRole('textbox', { name: 'Username' }).fill(data.username);
@@ -21,3 +21,5 @@ test('test', async ({ page }) => {
 //   await expect(page.getByRole('heading', { name: 'Edit Pay Grade' })).toBeVisible();
   await page.getByRole('button', { name: 'Save' }).click();
 });
+
+

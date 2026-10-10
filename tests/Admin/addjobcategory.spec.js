@@ -1,4 +1,5 @@
 import {test, expect} from '@playwright/test';
+import { faker } from '@faker-js/faker';
 
 test('add job category', async({page}) =>{
     await page.goto('/web/index.php/auth/login');
@@ -10,7 +11,8 @@ test('add job category', async({page}) =>{
     await page.getByRole('menuitem', { name: 'Job Categories' }).click();
     // await page.getByRole('menuitem', { name: 'Job Categories' }).click();
     await page.getByRole('button', { name: 'Add' }).click();
-    await page.getByRole('textbox').nth(1).fill('Ramesh');
+    await page.getByRole('textbox').nth(1).fill(faker.person.jobType());
+    await page.waitForTimeout(5000);
     await page.getByRole('button', { name: 'Save' }).click();
 
 

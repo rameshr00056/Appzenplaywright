@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-import data from "../../testdata/HRMlogin.json";
+// import data from "../../testdata/HRMlogin.json";
 
 import { faker } from '@faker-js/faker';
 
@@ -9,7 +9,10 @@ test('verify user can post in buzz', async ({ page }) => {
   await page.goto('/web/index.php/auth/login');
   await page.getByRole('textbox', { name: 'Username' }).click();
   await page.getByRole('textbox', { name: 'Username' }).fill(process.env.APP_USERNAME);
+<<<<<<< HEAD
   await page.waitForTimeout(5000);
+=======
+>>>>>>> 6d8b1fdd85cc53798307b237778fe66ff0fe6f6a
   await page.getByRole('textbox', { name: 'Password' }).click();
   await page.getByRole('textbox', { name: 'Password' }).fill(process.env.APP_PASSWORD);
   await page.getByRole('textbox', { name: 'Password' }).press('Enter');

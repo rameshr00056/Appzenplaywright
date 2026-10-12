@@ -8,6 +8,7 @@ on:
     - cron: '30 22 * * *' # Runs every day at midnight
 jobs:
   test:
+    environment: QA
     timeout-minutes: 60
     runs-on: ubuntu-latest
     

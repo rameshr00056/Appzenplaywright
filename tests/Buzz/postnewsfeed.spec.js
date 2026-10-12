@@ -16,6 +16,7 @@ test('verify user can post in buzz', async ({ page }) => {
   await page.getByRole('link', { name: 'Buzz' }).click();
   await page.getByRole('textbox', { name: 'What\'s on your mind?' }).click();
   await page.getByRole('textbox', { name: 'What\'s on your mind?' }).fill(faker.person.jobDescriptor());
-  await page.getByRole('button', { name: 'Post', exact: true }).click();dfgsdrgdrsgdrgr
+  await page.getByRole('button', { name: 'Post', exact: true }).click();
 //   await expect(page.getByText(faker.person.jobDescriptor())).toBeVisible();
+
 });

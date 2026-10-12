@@ -6,7 +6,7 @@ test ('verify user can add the textbox', async ({page}) => {
     await page.getByRole('textbox', { name: 'name@example.com' }).fill('abc@gmail.com')
     await page.getByRole('textbox', { name: 'Current Address' }).fill('Banglore')
     await page.getByRole('textbox').nth(3).fill('Tumkur')
-    await page.getByRole('button', { name: 'Submit' }).click()
+    await page.getByRole('button', { name: 'Submit' }).click()sadhjbhsdfgb
 
 
 

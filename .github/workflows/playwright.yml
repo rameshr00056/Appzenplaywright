@@ -10,6 +10,10 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    environment: production
+    env:
+      MY_SECRET: ${{ secrets.MY_SECRET }}
+      MY_VARIABLE: ${{ vars.MY_VARIABLE }}
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
@@ -27,3 +31,5 @@ jobs:
         name: playwright-report
         path: playwright-report/
         retention-days: 30
+
+        

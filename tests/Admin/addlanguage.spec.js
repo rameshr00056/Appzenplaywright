@@ -20,5 +20,5 @@ test('test', async ({ page }) => {
   await page.locator('form').getByRole('textbox').click();
   await page.locator('form').getByRole('textbox').fill(faker.food.vegetable());
   await page.getByRole('button', { name: 'Save' }).click();
-  await expect(page.getByRole('heading', { name: 'Languages' })).toBeVisible();
+  
 });

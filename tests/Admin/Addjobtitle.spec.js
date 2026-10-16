@@ -28,6 +28,6 @@ test('verify admin can add jobtitle', async ({ page }) => {
   await page.getByRole('textbox', { name: 'Add note' }).fill(dataz.note);
   await page.getByRole('button', { name: 'Save' }).click();
   await expect(page.getByRole('heading', { name: 'Job Titles' })).toBeVisible();
-  await page.close()
+  
 
 });

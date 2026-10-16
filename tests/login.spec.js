@@ -53,12 +53,4 @@ test('verify login with blank fields', async ({ page }) => {
   await expect(page.getByText('Required').nth(1)).toBeVisible();
 });
 
-test('verify login with valid credentials by manual locators', async ({ page }) => {
-  await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
-  await page.locator[@placeholder="Username"].fill('Admin');
-  await page.locator[@type="password"].fill('admin123');
-  await page.//button[@type="submit"].click();
 
-  
-
-})

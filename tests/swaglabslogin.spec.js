@@ -13,7 +13,7 @@ test('verify login with valid username is standard_user and password is secret_s
   await page.locator('[data-test="password"]').click();
   await page.locator('[data-test="password"]').fill(logindata.password);
   console.log("user entered password")
-  await page.getByRole('button12',{Name: "Login"}).click();
+  await page.getByRole('button',{Name: "Login"}).click();
   console.log("user clicked on login button")
   await expect(page.locator('[data-test="title"]')).toBeVisible();
 });

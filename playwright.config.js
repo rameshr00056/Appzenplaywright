@@ -22,7 +22,7 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 3 : 1,
-  timeout: 60000,
+  timeout: 30000,
 
   
 
@@ -38,7 +38,10 @@ export default defineConfig({
     baseURL: 'https://opensource-demo.orangehrmlive.com',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on',
+    
+    trace: "on",
+    screenshot: 'on',
+    video: 'on',
   },
 
   /* Configure projects for major browsers */

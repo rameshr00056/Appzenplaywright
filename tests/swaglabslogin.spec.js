@@ -5,13 +5,16 @@ import logindata from "../testdata/swaglabslogin.json"
 
 
 
-test('verify login with valid username is standard_user and password is secret_sauce', async ({ page }) => {
+test.only('verify login with valid username is standard_user and password is secret_sauce', async ({ page }) => {
   await page.goto('https://www.saucedemo.com/');
   await page.locator('[data-test="username"]').click();
   await page.locator('[data-test="username"]').fill(logindata.username);
+  console.log("user entered username")
   await page.locator('[data-test="password"]').click();
   await page.locator('[data-test="password"]').fill(logindata.password);
-  await page.locator('[data-test="login-button"]').click();
+  console.log("user entered password")
+  await page.getByRole('button12',{Name: "Login"}).click();
+  console.log("user clicked on login button")
   await expect(page.locator('[data-test="title"]')).toBeVisible();
 });
 

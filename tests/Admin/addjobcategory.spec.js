@@ -2,7 +2,7 @@ import {test, expect} from '@playwright/test';
 import { faker } from '@faker-js/faker';
 
 test('add job category', async({page}) =>{
-    await page.goto('/web/index.php/auth/login');
+    await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
     await page.getByRole('textbox', { name: 'Username' }).fill(process.env.APP_USERNAME);
     await page.getByRole('textbox', { name: 'Password' }).fill(process.env.APP_PASSWORD);
     await page.getByRole('button', { name: 'Login' }).click();

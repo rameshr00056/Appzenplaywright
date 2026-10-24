@@ -5,7 +5,7 @@ import data from '../../testdata/HRMlogin.json';
 import { faker } from '@faker-js/faker';
 
 test('verify user can add skills', async ({ page }) => {
-  await page.goto('/web/index.php/auth/login');
+  await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
   await page.getByRole('textbox', { name: 'Username' }).click();
   await page.getByRole('textbox', { name: 'Username' }).fill(data.username);
   await page.getByRole('textbox', { name: 'Password' }).click();

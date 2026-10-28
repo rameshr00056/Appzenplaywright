@@ -36,12 +36,12 @@ test('Based on the browser click on url', async ({page, browserName}) => {
 
 })
 
-test('Based on the vegetablename click on add to cart', async ({page}) => {
-    await page. goto('https://www.green-kart.in/')
-    if(await page.locator('//span[text()="Gawar phali / Cluster Beans"]'))
+// test('Based on the vegetablename click on add to cart', async ({page}) => {
+//     await page. goto('https://www.green-kart.in/')
+//     if(await page.locator('//span[text()="Gawar phali / Cluster Beans"]'))
 
 
 
-})
+// })
 
 

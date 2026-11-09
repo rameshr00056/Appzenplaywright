@@ -19,3 +19,5 @@ test('verify user can post in buzz', async ({ page }) => {
   await page.getByRole('button', { name: 'Post', exact: true }).click();
 //   await expect(page.getByText(faker.person.jobDescriptor())).toBeVisible();
 });
+
+

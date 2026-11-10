@@ -77,7 +77,7 @@ import { loginpage } from "path"
 test(loginwith valid CredentialsContainer, async({ page })) => {
 
 
-    const login = new loginpage()
+    const login = new loginpage(page)
     login.loginwithcreds("Admin", "admin123")
 
 

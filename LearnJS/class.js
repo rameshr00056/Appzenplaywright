@@ -1,3 +1,10 @@
+// Basic concepts in order to understand OOPS
+
+// Class 
+//methods
+//constructor
+//this
+//static
 // function add(a,b){
 
 //     console.log(a)
@@ -78,3 +85,7 @@ console.log(cal2.Trainer)
 //with the help of class object we can access variables and methods
 
 //you can create n number of objec of the same class
+
+
+
+

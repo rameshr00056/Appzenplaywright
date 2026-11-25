@@ -16,7 +16,7 @@ class A{
 
 A.prototype.z=67  //prototyped variable
 
-A.prototype.multiply=function(n1,n2){      //classname.prototype.functionname=functionkeyword(parameter, paramether)
+A.prototype.multiply=function(n1,n2){      //classname.prototype.functionname=functionkeyword(argument, argument)
     console.log(n1*2)
     
 

@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 
+
 test('verify login with valid credentials', async ({ page }) => {
   await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
         const validcredential = ["Admin","admin123"]
@@ -14,7 +15,8 @@ test('verify login with valid credentials', async ({ page }) => {
 });
 
 
-test('verify login with valid username and invalid password', async ({ page }) => {
+
+  test('verify login with valid username and invalid password', async ({ page }) => {
   await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
   await page.getByRole('textbox', { name: 'Username' }).click();
   await page.getByRole('textbox', { name: 'Username' }).fill('Admin');
@@ -48,11 +50,22 @@ test('verify login with invalid username and invalid password', async ({ page })
 
 
 
+
+
+
+
+
+
 test('verify login with blank fields', async ({ page }) => {
   await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
   await page.getByRole('button', { name: 'Login' }).click();
   await expect(page.getByText('Required').first()).toBeVisible();
   await expect(page.getByText('Required').nth(1)).toBeVisible();
 });
+
+
+
+
+
 
 
